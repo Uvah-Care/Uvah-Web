@@ -1,0 +1,29 @@
+{
+  "name": "uvahcare",
+  "version": "1.0.0",
+  "description": "hello!!",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test ",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishantprj/uvahcare.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "Natwar Jha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishantprj/uvahcare/issues"
+  },
+  "homepage": "https://github.com/nishantprj/uvahcare#readme",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "request": "^2.88.2"
+  }
+}

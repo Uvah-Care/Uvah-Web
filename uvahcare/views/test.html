@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive boxs</title>
+    <style>
+        /* Basic styling for boxs */
+        .box {
+            background-color: #ccc;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+        
+        @media (max-width: 499px) {
+            .roomcontainer {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+        @media (min-width: 500px) and (max-width: 999px) {
+            .roomcontainer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1000px) and (max-width: 1280px) {
+            .roomcontainer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1281px) {
+            .roomcontainer {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto">
+        <div class="grid">
+            <!-- Replace the following divs with your box components -->
+            <div class="box">box 1</div>
+            <div class="box">box 2</div>
+            <div class="box">box 3</div>
+            <div class="box">box 4</div>
+            <!-- Add more box divs as needed -->
+        </div>
+    </div>
+</body>
+</html>

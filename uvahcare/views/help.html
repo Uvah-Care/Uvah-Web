@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./public/fav.svg">
+    <meta name="title" content="Help | UvahCare">
+    <meta name="description" content="Empowering individuals through the democratization of awareness in the traditional system of medicines, particularly AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy), fostering a holistic approach to health and well-being for all.">
+    <meta property="og:title" content="UvahCare Prescription for Wellness">
+    <meta property="og:description" content="Empowering individuals through the democratization of awareness in the traditional system of medicines, particularly AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy), fostering a holistic approach to health and well-being for all.">
+    <meta property="og:image" content="https://d36musakzcdau7.cloudfront.net/esplanda/WebPage/yoga4-transformed-1710789790.png">
+    <title>Help | UvahCare</title>
+    
+</head>
+<style>
+    *{
+        font-family: 'inter';
+    }
+    .buttonmob{
+        display:none;
+    }
+    .buttondesktop{
+        display: flex;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .buttondesktop:hover {
+        scale: 1.1;
+    }
+
+    .navheader{
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #d3d3d3;
+      
+    }
+
+    .hero1{
+      padding: 35px;
+    }
+    .hero1absolute{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: 700px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #2CA6A6;
+      /* background-image: url('../public/yoga1.png'); */
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .heroimage{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .herotextcontainer{
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .herotext{
+      width: 100%;
+      max-width: 450px;
+      padding-top: 80px;
+    }
+
+    .herotext h1{
+      font-size: 70px;
+      color: #000000;
+      line-height: 1.2;
+      padding-bottom: 15px;
+    }
+    .herotext h5{
+      font-size: 20px;
+      color: #000000;
+      padding-bottom: 25px;
+    }
+
+    .buttonhero{
+      width: max-content;
+        display: flex;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .buttonnav{
+        width: 100%;
+        display: none;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+        margin: 20px 0;
+
+    }
+
+    .buttonhero:hover {
+        scale: 1.1;
+    }
+
+    .section1{
+      padding: 15px 40px;
+    }
+
+    .section1 .textcontainer{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section1 .textcontainer h1{
+      font-size: 36px;text-align: center;
+      line-height: 1.1;
+    }
+    .active{
+      border-bottom: 1px solid #d3d3d3;
+    }
+
+    .navitem{
+      color: black;
+    }
+    .navitem:hover{
+      color: #2CA6A6;
+    }
+
+    .reviews{
+      width: 100%;
+      height: 260px;
+    }
+    .reviews img{
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .showondesktop{
+      display: flex;
+    }
+
+
+    .hideondesktop{
+      display: none;
+    }
+
+    .section2{
+      padding: 0 35px;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .section2text{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .section2text h1{
+      font-size: 55px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+
+    .section2text h5{
+      font-size: 16px;
+    }
+    .section2img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .section2img img{
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);
+      
+    }
+
+    .restbody{
+      padding-top: 40px;
+      padding-bottom: 30px;
+
+    }
+
+
+    .section3{
+      padding: 0 35px;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .section3text{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .section3text h1{
+      font-size: 55px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+
+    .section3text h5{
+      font-size: 16px;
+    }
+    .section3img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .section3img img{
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      border-radius: 22px;
+      
+    }
+
+    .abouttitle{
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .abouttitle h1{
+      font-size: 48px;
+      text-align: left;
+    }
+
+    .aboutsectionbody{
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .aboutsectionbody h2{
+      font-size: 32px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+
+
+
+    
+
+    
+
+
+
+    
+    @media (max-width:765px){
+      .abouttitle{
+      padding: 15px;
+    }
+
+    .abouttitle h1{
+      font-size: 48px;
+    }
+
+    .aboutsectionbody{
+      padding: 15px;
+    }
+    .aboutsectionbody h2{
+      font-size: 28px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+      .section1{
+      padding: 15px 20px;
+    }
+    .section2{
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section3{
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section2text h1{
+      font-size: 32px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+    .section3text h1{
+      font-size: 32px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+    .section2img img{
+      max-width: 230px;
+    }
+    .section3img img{
+      max-width: 230px;
+    }
+    
+      .flexcon{
+      display: flex;
+      flex-direction: column;
+    }
+    .hero1{
+      padding: 35px 15px;
+    }
+    .herotext{
+      padding-top: 180px
+    }
+    .herotext h1{
+      font-size: 48px
+    }
+    .herotext h5{
+      font-size: 18px;
+    }
+    .hero1absolute{
+      
+      height: 600px;
+    }
+    .section1 .textcontainer h1{
+      font-size: 26px;text-align: center;
+      line-height: 1.1;
+    }
+  }
+
+    @media (max-width:500px){
+      .buttonnav{
+        display: flex;
+      }
+      .abouttitle{
+      padding: 15px;
+    }
+
+    .abouttitle h1{
+      font-size: 32px;
+    }
+
+    .aboutsectionbody{
+      padding: 15px;
+    }
+    .aboutsectionbody h2{
+      font-size: 24px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+      /* .hero1absolute{
+      background-image: url('../public/yoga3.png');
+      } */
+      .section1 .textcontainer h1{
+      font-size: 24px;text-align: center;
+      line-height: 1.1;
+    }
+        .buttonmob{
+        display:flex;
+    }
+    .showondesktop{
+      display: none;
+    }
+    .hideondesktop{
+      display: flex;
+    }
+    .buttondesktop{
+        display: none;
+    }
+    .herotext h1{
+      font-size: 36px
+    }
+    .herotext h5{
+      font-size: 16px;
+    }
+    
+    }
+</style>
+
+<body>
+    
+
+  <nav class="navheader fixed w-full z-20 top-0 start-0" id="nav">
+    <div class="md:px-[35px] flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/public/logo.svg" class="h-8" alt="UvahCare logo">
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <a class="buttondesktop text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+            <span>Download</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+    </div>
+    <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+      
+      <a class="buttonnav text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+        <span>Download</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+            <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <ul class="flexcon flex gap-[10px]">
+        <li>
+          <a href="index.html" class="navitem block py-2 px-3 text-dark text-[16px]">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="navitem block py-2 px-3 text-dark text-[16px]">About</a>
+        </li>
+        <li>
+          <a href="why-us.html" class="navitem block py-2 px-3 text-dark text-[16px]">Why Us</a>
+        </li>
+        <li>
+          <a href="help.html" class="navitem block py-2 px-3 text-dark text-[16px]">Help</a>
+        </li>
+        <li>
+          <a href="contact.html" class="navitem block py-2 px-3 text-dark text-[16px]">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="py-9"></div>
+<div class="restbody">
+  <div class="abouttitle">
+    <h1>Frequently asked questions</h1>
+  </div>
+  <div class="aboutsectionbody">
+    <p>The Uvah Care Help Center is here to answer your questions and guide you through the platform. Here, you can find answers to frequently asked questions (FAQs), tutorials, and troubleshooting guides. Can't find what you are looking for? <a style="color: #2CA6A6; text-decoration: none;" href="contact.html">Contact us</a>.
+    </p>
+  </div>
+
+  <section class="section-2 max-w-[1200px] mx-auto">
+    <div class="container px-4 md:px-6 mx-auto">
+  
+        <div class="mt-2 space-y-5 ">
+            <div class="mt-4 p-5 bg-gray-100 rounded-lg">
+                <input type="checkbox" id="faq-toggle-1" class="hidden">
+                <label for="faq-toggle-1" class="flex items-center justify-between w-full cursor-pointer">
+                    <h1 class="font-[500] text-[#000] text-[16px]">Is it safe using Uvah Care?
+                    </h1>
+                </label>
+  
+                <div class="faq-answer mt-4 text-[16px] text-[#000000]">
+                    <p>Downloading and using the <a href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" class="text-[#2CA6A6]" target="_blank">Uvahcare app</a> is completely safe. It prioritises user safety by verifying the qualifications of the practitioners you can connect with. It connects you with qualified practitioners and offers educational resources on various AYUSH practices, all while keeping your information secure. But it's always best to discuss any new practices with your doctor first.
+                    </p>
+                </div>
+            </div>
+  
+            <div class="mt-4 p-5 bg-gray-100 rounded-lg">
+              <input type="checkbox" id="faq-toggle-2" class="hidden">
+              <label for="faq-toggle-2" class="flex items-center justify-between w-full cursor-pointer">
+                  <h1 class="font-[500] text-[#000] text-[16px]">How can I incorporate Ayurveda into my daily routine for better stress management at Uvah Care ?</h1>
+              </label>
+
+              <div class="faq-answer mt-4 text-[16px] text-[#000000]">
+                  <p>Create a calming routine with a tailored Dinacharya, try soothing rituals like Ayurvedic self-massage or guided meditations, and learn how to manage stress with Ayurvedic nutrition recommendations. You can even avoid the afternoon coffee crash by drinking soothing herbal teas. To help you de-stress healthily, keep in mind that Uvahcare can help you connect with practitioners.
+                  </p>
+              </div>
+            </div>
+
+            <div class="mt-4 p-5 bg-gray-100 rounded-lg">
+              <input type="checkbox" id="faq-toggle-3" class="hidden">
+              <label for="faq-toggle-3" class="flex items-center justify-between w-full cursor-pointer">
+                  <h1 class="font-[500] text-[#000] text-[16px]">How does using Ayurvedic remedies made with natural ingredients contribute to a sustainable lifestyle?</h1>
+              </label>
+
+              <div class="faq-answer mt-4 text-[16px] text-[#000000]">
+                  <p>Choosing natural medicines, such as herbs and spices, might reduce the need for synthetic pharmaceuticals, which may have hazardous manufacture and disposal methods. Additionally, Ayurveda frequently promotes the use of seasonal and locally obtained foods, which lowers the carbon footprint of long-distance travel and promotes sustainable farming methods. Lastly, a lot of Ayurvedic procedures promote waste reduction and thoughtful consumption. You're improving the health of the earth as well as your own well-being when you select Uvah Care and adopt these habits!</p>
+              </div>
+            </div>
+
+            <div class="mt-4 p-5 bg-gray-100 rounded-lg">
+              <input type="checkbox" id="faq-toggle-3" class="hidden">
+              <label for="faq-toggle-3" class="flex items-center justify-between w-full cursor-pointer">
+                  <h1 class="font-[500] text-[#000] text-[16px]">How can I find out if a specific AYUSH practice is right for me?
+                  </h1>
+              </label>
+
+              <div class="faq-answer mt-4 text-[16px] text-[#000000]">
+                  <p>For personalised advice, you may choose to interact with a certified practitioner at Uvah Care via the platform. A wealth of information about different AYUSH techniques is also available at Uvahcare. You can Explore the articles and other materials to learn about the advantages and disadvantages of the practice you're considering.
+
+                  </p>
+              </div>
+            </div>
+            <!-- Repeat the same structure for other FAQs -->
+        </div>
+    </div>
+  </section>
+  
+
+  <!-- <div class="aboutsectionbody">
+    <h2>Our App</h2>
+    <p>More than 2 billion people in over 180 countries use WhatsApp1 to stay in touch with friends and family, anytime and anywhere. WhatsApp is free2 and offers simple, secure, reliable messaging and calling, available on phones all over the world.
+      <br>
+      1 And yes, the name WhatsApp is a pun on the phrase What's Up.
+      <br>
+      2 Data charges may apply.</p>
+  </div> -->
+</div>
+
+
+
+
+<footer class="shadow bg-[#131B20]">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0 flex flex-col gap-8">
+            <a href="index.html" class="flex items-center">
+                <img src="./public/logo.svg" class="h-8 me-3" alt="UvahCare Logo" />
+            </a>
+            <a class="buttonhero text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+              <span>Download</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125"
+                  stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="index.html" class="hover:underline">Home</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="about.html" class="hover:underline">About</a>
+                    </li>
+                    <li>
+                      <a href="why-us.html" class="hover:underline">Why us</a>
+                  </li>
+                </ul>
+            </div>
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="help.html" class="hover:underline ">Help</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="privacy-policy.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms-of-service.html" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="index.html" class="hover:underline">Uvahcare</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="https://www.facebook.com/pages/category/Medical---Health/UvahCare-113228164180677/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="https://www.instagram.com/uvah_care/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <g clip-path="url(#clip0_92_2)">
+                  <path
+                    d="M12.272 2.768C12.0821 2.768 11.8965 2.8243 11.7387 2.92979C11.5808 3.03528 11.4577 3.18521 11.3851 3.36062C11.3124 3.53604 11.2934 3.72906 11.3304 3.91529C11.3675 4.10151 11.4589 4.27256 11.5932 4.40682C11.7274 4.54108 11.8985 4.63251 12.0847 4.66955C12.2709 4.7066 12.464 4.68758 12.6394 4.61492C12.8148 4.54226 12.9647 4.41922 13.0702 4.26135C13.1757 4.10348 13.232 3.91787 13.232 3.728C13.232 3.47339 13.1309 3.22921 12.9508 3.04918C12.7708 2.86914 12.5266 2.768 12.272 2.768ZM15.952 4.704C15.9364 4.04024 15.8121 3.38352 15.584 2.76C15.3806 2.22651 15.064 1.74342 14.656 1.344C14.2599 0.933941 13.7756 0.619341 13.24 0.424C12.6181 0.188929 11.9607 0.061768 11.296 0.048C10.448 -4.47035e-08 10.176 0 8 0C5.824 0 5.552 -4.47035e-08 4.704 0.048C4.03932 0.061768 3.38187 0.188929 2.76 0.424C2.22534 0.621319 1.74155 0.935648 1.344 1.344C0.933941 1.74014 0.619341 2.22435 0.424 2.76C0.188929 3.38187 0.061768 4.03932 0.048 4.704C-4.47035e-08 5.552 0 5.824 0 8C0 10.176 -4.47035e-08 10.448 0.048 11.296C0.061768 11.9607 0.188929 12.6181 0.424 13.24C0.619341 13.7756 0.933941 14.2599 1.344 14.656C1.74155 15.0644 2.22534 15.3787 2.76 15.576C3.38187 15.8111 4.03932 15.9382 4.704 15.952C5.552 16 5.824 16 8 16C10.176 16 10.448 16 11.296 15.952C11.9607 15.9382 12.6181 15.8111 13.24 15.576C13.7756 15.3807 14.2599 15.0661 14.656 14.656C15.0658 14.2581 15.3827 13.7746 15.584 13.24C15.8121 12.6165 15.9364 11.9598 15.952 11.296C15.952 10.448 16 10.176 16 8C16 5.824 16 5.552 15.952 4.704ZM14.512 11.2C14.5062 11.7078 14.4142 12.211 14.24 12.688C14.1123 13.0362 13.9071 13.3507 13.64 13.608C13.3805 13.8724 13.0666 14.0771 12.72 14.208C12.243 14.3822 11.7398 14.4742 11.232 14.48C10.432 14.52 10.136 14.528 8.032 14.528C5.928 14.528 5.632 14.528 4.832 14.48C4.30471 14.4899 3.77968 14.4087 3.28 14.24C2.94863 14.1025 2.64908 13.8982 2.4 13.64C2.13447 13.383 1.93187 13.0682 1.808 12.72C1.61269 12.2361 1.50435 11.7216 1.488 11.2C1.488 10.4 1.44 10.104 1.44 8C1.44 5.896 1.44 5.6 1.488 4.8C1.49159 4.28084 1.58636 3.76636 1.768 3.28C1.90884 2.94233 2.12501 2.64133 2.4 2.4C2.64305 2.12493 2.94343 1.90648 3.28 1.76C3.76764 1.58403 4.2816 1.49206 4.8 1.488C5.6 1.488 5.896 1.44 8 1.44C10.104 1.44 10.4 1.44 11.2 1.488C11.7078 1.49382 12.211 1.5858 12.688 1.76C13.0515 1.89492 13.3778 2.11428 13.64 2.4C13.9022 2.64574 14.107 2.94619 14.24 3.28C14.4178 3.76715 14.5098 4.28142 14.512 4.8C14.552 5.6 14.56 5.896 14.56 8C14.56 10.104 14.552 10.4 14.512 11.2ZM8 3.896C7.18865 3.89758 6.39597 4.13962 5.72212 4.59153C5.04828 5.04345 4.5235 5.68496 4.21411 6.435C3.90471 7.18505 3.82458 8.00997 3.98384 8.80554C4.14309 9.60111 4.53459 10.3316 5.10886 10.9048C5.68313 11.4779 6.41441 11.868 7.21029 12.0257C8.00617 12.1834 8.83093 12.1017 9.58038 11.7908C10.3298 11.48 10.9703 10.954 11.4209 10.2792C11.8715 9.6045 12.112 8.81135 12.112 8C12.1131 7.46008 12.0074 6.92529 11.801 6.42636C11.5946 5.92744 11.2916 5.47425 10.9095 5.09284C10.5273 4.71143 10.0736 4.40934 9.57424 4.20394C9.07492 3.99854 8.53991 3.89389 8 3.896ZM8 10.664C7.47311 10.664 6.95805 10.5078 6.51996 10.215C6.08187 9.92231 5.74042 9.50625 5.53878 9.01947C5.33715 8.53269 5.2844 7.99705 5.38719 7.48028C5.48998 6.96351 5.7437 6.48883 6.11627 6.11627C6.48883 5.7437 6.96351 5.48998 7.48028 5.38719C7.99705 5.2844 8.53269 5.33715 9.01947 5.53878C9.50625 5.74042 9.92231 6.08187 10.215 6.51996C10.5078 6.95805 10.664 7.47311 10.664 8C10.664 8.34984 10.5951 8.69626 10.4612 9.01947C10.3273 9.34268 10.1311 9.63636 9.88373 9.88373C9.63636 10.1311 9.34268 10.3273 9.01947 10.4612C8.69626 10.5951 8.34984 10.664 8 10.664Z"
+                    fill="currentColor" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_92_2">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+                <span class="sr-only">Instagram page</span>
+            </a>
+            <a href="https://twitter.com/CareUvah?t=jb3rWQa-ldpURupJmfnQgw&s=08" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <g clip-path="url(#clip0_92_10)">
+                  <path
+                    d="M9.74857 6.50133L14.9943 0H12.653L8.64914 4.96533L5.09714 0H0L5.94743 8.31238L0.358095 15.2381H2.70019L7.04686 9.85143L10.9029 15.2381H16L9.74857 6.50133ZM7.93524 8.74895L6.83429 7.21067L2.56 1.23962H4.32L7.7699 6.05257L8.86933 7.59162L13.4545 13.9985H11.6945L7.93524 8.74895Z"
+                    fill="currentColor" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_92_10">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="https://youtube.com/channel/UCAAxT_qT81CNMlY5kEhZZeA" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M6.4 10L10.552 7.6L6.4 5.2V10ZM15.648 3.736C15.752 4.112 15.824 4.616 15.872 5.256C15.928 5.896 15.952 6.448 15.952 6.928L16 7.6C16 9.352 15.872 10.64 15.648 11.464C15.448 12.184 14.984 12.648 14.264 12.848C13.888 12.952 13.2 13.024 12.144 13.072C11.104 13.128 10.152 13.152 9.272 13.152L8 13.2C4.648 13.2 2.56 13.072 1.736 12.848C1.016 12.648 0.552 12.184 0.352 11.464C0.248 11.088 0.176 10.584 0.128 9.944C0.0720001 9.304 0.048 8.752 0.048 8.272L0 7.6C0 5.848 0.128 4.56 0.352 3.736C0.552 3.016 1.016 2.552 1.736 2.352C2.112 2.248 2.8 2.176 3.856 2.128C4.896 2.072 5.848 2.048 6.728 2.048L8 2C11.352 2 13.44 2.128 14.264 2.352C14.984 2.552 15.448 3.016 15.648 3.736Z"
+                  fill="currentColor" />
+              </svg>
+                <span class="sr-only">YouTube account</span>
+            </a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<style>
+  /* Hide the FAQ answers by default */
+  .faq-answer {
+      display: none;
+  }
+
+  /* Show the FAQ answer when the checkbox is checked */
+  input[type="checkbox"]:checked ~ .faq-answer {
+      display: block;
+  }
+</style>
+
+
+
+
+
+    
+    
+    
+    
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

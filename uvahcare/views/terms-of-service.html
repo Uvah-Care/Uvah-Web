@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./public/fav.svg">
+    <meta name="title" content="Terms of Service | UvahCare">
+    <meta name="description" content="Empowering individuals through the democratization of awareness in the traditional system of medicines, particularly AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy), fostering a holistic approach to health and well-being for all.">
+    <meta property="og:title" content="UvahCare Prescription for Wellness">
+    <meta property="og:description" content="Empowering individuals through the democratization of awareness in the traditional system of medicines, particularly AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy), fostering a holistic approach to health and well-being for all.">
+    <meta property="og:image" content="https://d36musakzcdau7.cloudfront.net/esplanda/WebPage/yoga4-transformed-1710789790.png">
+    <title>Terms of Service | UvahCare</title>
+    
+</head>
+<style>
+    *{
+        font-family: 'inter';
+    }
+    .buttonmob{
+        display:none;
+    }
+    .buttondesktop{
+        display: flex;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+    .buttondesktop:hover {
+        scale: 1.1;
+    }
+
+    .navheader{
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #d3d3d3;
+      
+    }
+
+    .hero1{
+      padding: 35px;
+    }
+    .hero1absolute{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: 700px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #2CA6A6;
+      /* background-image: url('../public/yoga1.png'); */
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .heroimage{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .herotextcontainer{
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .herotext{
+      width: 100%;
+      max-width: 450px;
+      padding-top: 80px;
+    }
+
+    .herotext h1{
+      font-size: 70px;
+      color: #000000;
+      line-height: 1.2;
+      padding-bottom: 15px;
+    }
+    .herotext h5{
+      font-size: 20px;
+      color: #000000;
+      padding-bottom: 25px;
+    }
+
+    .buttonhero{
+      width: max-content;
+        display: flex;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .buttonnav{
+        width: 100%;
+        display: none;
+        height: 40px;
+        padding: 10px 21px;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 56px;
+        background-color: #2CA6A6;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.2s;
+        cursor: pointer;
+        margin: 20px 0;
+
+    }
+
+    .buttonhero:hover {
+        scale: 1.1;
+    }
+
+    .section1{
+      padding: 15px 40px;
+    }
+
+    .section1 .textcontainer{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section1 .textcontainer h1{
+      font-size: 36px;text-align: center;
+      line-height: 1.1;
+    }
+    .active{
+      border-bottom: 1px solid #d3d3d3;
+    }
+
+    .navitem{
+      color: black;
+    }
+    .navitem:hover{
+      color: #2CA6A6;
+    }
+
+    .reviews{
+      width: 100%;
+      height: 260px;
+    }
+    .reviews img{
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .showondesktop{
+      display: flex;
+    }
+
+
+    .hideondesktop{
+      display: none;
+    }
+
+    .section2{
+      padding: 0 35px;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .section2text{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .section2text h1{
+      font-size: 55px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+
+    .section2text h5{
+      font-size: 16px;
+    }
+    .section2img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .section2img img{
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 22px;
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.10);
+      
+    }
+
+    .restbody{
+      padding-top: 40px;
+      padding-bottom: 30px;
+
+    }
+
+
+    .section3{
+      padding: 0 35px;
+      display: flex;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .section3text{
+      width: 100%;
+      text-align: left;
+
+    }
+
+    .section3text h1{
+      font-size: 55px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+
+    .section3text h5{
+      font-size: 16px;
+    }
+    .section3img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .section3img img{
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      border-radius: 22px;
+      
+    }
+
+    .abouttitle{
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .abouttitle h1{
+      font-size: 48px;
+      text-align: left;
+    }
+
+    .aboutsectionbody{
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .aboutsectionbody h2{
+      font-size: 32px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+
+
+
+    
+
+    
+
+
+
+    
+    @media (max-width:765px){
+      .abouttitle{
+      padding: 15px;
+    }
+
+    .abouttitle h1{
+      font-size: 48px;
+    }
+
+    .aboutsectionbody{
+      padding: 15px;
+    }
+    .aboutsectionbody h2{
+      font-size: 28px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+      .section1{
+      padding: 15px 20px;
+    }
+    .section2{
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section3{
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section2text h1{
+      font-size: 32px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+    .section3text h1{
+      font-size: 32px;
+      line-height: 1.1;
+      padding-bottom: 20px;
+    }
+    .section2img img{
+      max-width: 230px;
+    }
+    .section3img img{
+      max-width: 230px;
+    }
+    
+      .flexcon{
+      display: flex;
+      flex-direction: column;
+    }
+    .hero1{
+      padding: 35px 15px;
+    }
+    .herotext{
+      padding-top: 180px
+    }
+    .herotext h1{
+      font-size: 48px
+    }
+    .herotext h5{
+      font-size: 18px;
+    }
+    .hero1absolute{
+      
+      height: 600px;
+    }
+    .section1 .textcontainer h1{
+      font-size: 26px;text-align: center;
+      line-height: 1.1;
+    }
+  }
+
+    @media (max-width:500px){
+      .buttonnav{
+        display: flex;
+      }
+      .abouttitle{
+      padding: 15px;
+    }
+
+    .abouttitle h1{
+      font-size: 32px;
+    }
+
+    .aboutsectionbody{
+      padding: 15px;
+    }
+    .aboutsectionbody h2{
+      font-size: 24px;
+    }
+
+    .aboutsectionbody p{
+      font-size: 16px;
+      text-align: left;
+    }
+      /* .hero1absolute{
+      background-image: url('../public/yoga3.png');
+      } */
+      .section1 .textcontainer h1{
+      font-size: 24px;text-align: center;
+      line-height: 1.1;
+    }
+        .buttonmob{
+        display:flex;
+    }
+    .showondesktop{
+      display: none;
+    }
+    .hideondesktop{
+      display: flex;
+    }
+    .buttondesktop{
+        display: none;
+    }
+    .herotext h1{
+      font-size: 36px
+    }
+    .herotext h5{
+      font-size: 16px;
+    }
+    
+    }
+</style>
+
+<body>
+    
+
+  <nav class="navheader fixed w-full z-20 top-0 start-0" id="nav">
+    <div class="md:px-[35px] flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/public/logo.svg" class="h-8" alt="UvahCare logo">
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <a class="buttondesktop text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+            <span>Download</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+    </div>
+    <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+      
+      <a class="buttonnav text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+        <span>Download</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+            <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <ul class="flexcon flex gap-[10px]">
+        <li>
+          <a href="index.html" class="navitem block py-2 px-3 text-dark text-[16px]">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="navitem block py-2 px-3 text-dark text-[16px]">About</a>
+        </li>
+        <li>
+          <a href="why-us.html" class="navitem block py-2 px-3 text-dark text-[16px]">Why Us</a>
+        </li>
+        <li>
+          <a href="help.html" class="navitem block py-2 px-3 text-dark text-[16px]">Help</a>
+        </li>
+        <li>
+          <a href="contact.html" class="navitem block py-2 px-3 text-dark text-[16px]">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="py-9"></div>
+<div class="restbody">
+  <div class="abouttitle">
+    <h1>Terms of Service</h1>
+  </div>
+  <div class="aboutsectionbody">
+    <p>
+      Uvah Care is a “Company” providing services related to Health and Wellness by the brand name Uvah Care. These Terms of Service constitute a legally binding agreement between you and Uvah Care (together with its affiliates, “Uvah Care”, “we,” “our” or “us”) governing your use of the Uvah Care Service (as defined below), our mobile application (the “App”) and our website (the “Site”). The related services provided by Uvah Care to potential Client (defined in Section 1), the Site, and the App are collectively referred to as the “Service.” YOU ACKNOWLEDGE AND AGREE THAT, BY CLICKING ON THE “I AGREE” OR SIMILAR BUTTON, REGISTERING FOR AN ACCOUNT, DOWNLOADING THE APP OR ANY APP UPGRADES, USING THE APP ON YOUR MOBILE DEVICE, OR ACCESSING OR USING THE Uvah Care PLATFORM, YOU ARE INDICATING THAT YOU HAVE READ, UNDERSTAND AND AGREE TO BE BOUND BY THESE TERMS OF SERVICE, WHETHER OR NOT YOU HAVE REGISTERED WITH THE SITE OR THE APP. IF YOU DO NOT AGREE TO THESE TERMS OF SERVICE, THEN YOU HAVE NO RIGHT TO ACCESS OR USE THE Uvah Care PLATFORM. These Terms are effective as of the date you first click “I agree” (or similar button or checkbox) or use or access the Platform, whichever is earlier. Any personal data you submit to the Uvah Care Platform or which we collect about you is governed by our Privacy Policy (“Privacy Policy”), available at https://www.Uvah Care.com/privacy. You acknowledge that by using the Uvah Care Platform you have reviewed the Privacy Policy. The Privacy Policy is incorporated by reference into these Terms of Service and together form and are hereinafter referred to as this “Agreement.”
+<br><br>
+<span style="font-weight: 600;">Service</span><br>
+The Uvah Care Service includes web and mobile application-based personal training service. “Clients” are individuals who subscribe to Uvah Care’s fitness classes, meditation, nutrition and related services (the “Services”) from Uvah Care. Clients are hereinafter referred to as “Users.”
+
+<br><br>
+<span style="font-weight: 600;">Changes to Terms</span><br>
+
+The Company shall have the right, at its sole discretion, to modify, add, or remove any terms or conditions of these Terms of Service without notice or liability to the User. Any changes to these Terms of Service shall be effective immediately following the posting of such changes. The User agrees to review these Terms of Service from time to time and agree that any subsequent use by the User of the Services following changes to these Terms of Service shall constitute the User’s acceptance of all such changes.
+
+<br><br>
+<span style="font-weight: 600;">Access and Use of Service</span><br>
+
+Users registering for the Services must be at least eighteen (18) years of age. In case the User is below 18 years of age, the User Registration information must be verified by the parents/guardians. The Company makes no claims that the Services may be lawfully accessed in any specific location. Access to the Services may not be legal by certain persons or in certain states or certain countries, or may require government authorization or registration. When the Users access the Services, they are solely responsible for compliance with the laws and regulations of their jurisdiction.
+
+<br><br>
+<span style="font-weight: 600;">User's Conduct</span><br>
+
+
+The Services may be used only for lawful purposes relating to live and/or offline streaming and related materials. The Company specifically prohibits any use of the Services, and all Users agree not to use the Services, for any purposes other than designated by the Company. The User is prohibited from violating or attempting to violate the security of the Services, including, without limitation, (a) accessing data not intended for such user or logging into a server or account which the user is not authorized to access, (b) attempting to probe, scan or test the vulnerability of a system or network or to breach security or authentication measures without proper authorization, (c) attempting to interfere with service to any user, host or network, including, without limitation, via means of submitting a virus to this Services, overloading, "flooding", "spamming", "mail-bombing" or "crashing", (d) forging any TCP/IP packet header or any part of the header information in any e-mail or newsgroup posting, (e) scraping or harvesting data or (f) the use of robots to skew payouts. Violations of system or network security or inappropriate conduct may result in civil or criminal liability. The Company will investigate occurrences that may involve such violations and may involve, and cooperate with law enforcement entities in prosecuting users who are involved in such violations.
+
+<br><br>
+<span style="font-weight: 600;">User Information</span><br>
+
+
+The User is solely responsible for the information s/he inputs or uploads to the Services and warrants and represents that the User has the right and authorization to register for the Services and post User Generated Content. The Company reserves the right in its sole discretion to decide whether the information User inputs or uploads is appropriate and complies with the Terms of Service, other Company policies, and applicable laws and regulations. If the User registers for the Services, s/he will be asked to provide certain information including a valid email address. The User warrants and represents that all such information is current and accurate, and will be kept up-to-date. The User’s privacy rights are set forth in Company’s Privacy Policy. Company reserves the right to offer Company or third party services and products to the User based on the preferences that the User identifies in his/her registration and at any time thereafter, unless the user opts-out of receiving third party services and products.
+
+<br><br>
+<span style="font-weight: 600;">Username/Password/Security</span><br>
+
+
+The User is responsible for maintaining the confidentiality of his/her information as it relates to the Services, including the username and password, and are responsible for all uses of the username and password whether or not authorized by the User. If the User wishes to have someone else use his/her device, it is important that the User always logs out so no other individual will have access to his/her content. The User agrees to immediately notify the Company of any unauthorized use of his/her username and password.
+
+<br><br>
+<span style="font-weight: 600;">Medical Disclaimer</span><br>
+
+
+Before starting any yoga or other exercise program through the Service, the User may consult his/her physician to determine if such program is right for the User’s needs. Company is not a medical organization and its teachers or staff cannot give the user any medical advice or diagnosis. All suggestions and comments relating to the use of equipment, poses, moves and instruction are not required to be performed by the user and are carried out at the user’s election while using the Service. Nothing contained in this Service should be construed as any form of such medical advice or diagnosis. By using the Services, the User represents that s/he understands that physical exercise involves strenuous physical movement, and that such activity carries the risk of injury whether physical or mental. The User understands that it is his/her responsibility to judge his/ her physical and mental capabilities for such activities. It is the User’s responsibility to ensure that by participating in classes and activities from the Company, s/he will not exceed his/ her limits while performing such activity, and s/he will select the appropriate level of classes for his/ her skills and abilities, as well as for any mental or physical conditions and/or limitations the user has. The User understands that, from time to time the trainers may suggest physical adjustments or the use of equipment and it is the User’s sole responsibility to determine if any such suggested adjustment or equipment is appropriate for his/ her level of ability and physical and mental condition. The User expressly waives and releases any claim that the User may have at any time for injury of any kind against Company, or any person or entity involved with the Company, including without limitation its directors, trainers, independent contractors, employees, agents, contractors, affiliates and representatives. Each User is solely responsible for deciding whether the Services offered are suitable for his/ her own purposes and whether the Services match the User’s needs. The Company grants the User a limited, non-exclusive license to access and use the Services for the User’s own personal and non-commercial purposes. This includes rights to view content on the Company's website and applications. If the User elects to access any component of the Services for which there is a fee, the User agrees to pay all fees and charges associated with his/ her account on a timely basis. All such fees and charges (including any taxes and late fees, as applicable) will be charged on the User’s payment mode. Each User agrees to maintain valid payment information as part of the User’s account information when applicable.
+
+<br><br>
+<span style="font-weight: 600;">Access to Services – Subscriptions & Purchases</span><br>
+
+
+The Services may allow the User to access live or offline digital content on a pay per view basis, subscription basis, rent, or purchases. The basis on which digital content is available on the Services will be indicated in the relevant pages/ screens for which the User may purchase the digital content. Subject to the User’s payment of any applicable fees, purchases, subscriptions, rent or pay per view, the Company grants the user a non-exclusive, non-transferrable, personal, non-sub licensable, limited right and license to view the video stream based upon the applicable fees, purchases, subscriptions, rent or pay per view selected by the User. The Company makes no guarantees as to the resolution and quality of User’s digital content when streaming. The quality and speed of the User’s stream of digital content has many different variables, including the User’s connection speed, location, download speeds, devices, player and bandwidth. Once purchased, the amount paid cannot be refunded unless explicitly mentioned in your Services
+
+<br><br>
+<span style="font-weight: 600;">Payments & Billing</span><br>
+
+
+The live or offline digital content available under specific payment plans, including pay per view, subscription, membership, or rent will change from time to time at the sole discretion of the Company. The Company makes no guarantee as to the availability of a specific payment plan. By purchasing a payment plan, the User expressly agrees that the Company is authorized to charge the User’s selected payment plan on the payment method the user designates. The User can update or change this information at any time by accessing the relevant section. Receipts are sent once the charge is successful to the registered email account. The User’s subscription will continue in effect unless and until the user cancels his/ her subscription or the Company terminates it. The User must cancel his/ her payment plan according to the terms of that specific plan prior to the next charge in order to avoid billing.
+
+<br><br>
+<span style="font-weight: 600;">User Comments and Suggestions</span><br>
+
+
+While the Company values User feedback, the User needs to be specific in his/ her comments and should not submit creative ideas, inventions, or suggestions. If, despite the prohibition, Users send creative ideas, inventions, or suggestions, all such submission shall be the property of the Company in whole or in part. The Company shall own exclusively all now known or later discovered rights to the submissions and shall be entitled to unrestricted use of the submissions for any purpose whatsoever, commercial or otherwise, without compensation to Users or any other third party. No part of the submissions shall be subject to any obligation of confidence and the Company shall not be liable for any use or disclosure.
+
+<br><br>
+<span style="font-weight: 600;">Intellectual Property</span><br>
+
+
+COMPANY NAME and any other Company trademarks and trade names, and any variations thereof, are and shall remain the trademarks and trade names and exclusive property of the Company, and any unauthorized use of such trademarks and trade names is prohibited. The Services (including without limitation the related software and media, the design of the Services and associated content including text, scripts, graphics, interactive features and the like, and the trademarks, service marks and logos contained therein (all programs, complied binaries, interface layout, interface text, documentation, resources and graphics) is the sole and exclusive property of the Company and is protected by copyright, trademark, and other intellectual property common and statutory laws of the India and under applicable laws of other countries. The User agrees that COMPANY owns and retains all rights to the Services and that is content is solely owned and controlled by the content provider and all such material are protected and copyrighted, trademarked and protected by copyright, trademark, and other intellectual property common and statutory laws of the India and under applicable laws of other countries. The User may not sell or modify the Services content or the Services, or reproduce, display, publicly perform, distribute, or otherwise use the Services in any way for any purpose.
+
+<br><br>
+<span style="font-weight: 600;">Social Networking</span><br>
+
+
+Users may have the option to Twitter, Facebook or other social networking Services through the Services to share links and content. Users undertake this option as their sole responsibility, including but not limited to complying with all of the terms and conditions of the social networking Services.
+
+<br><br>
+<span style="font-weight: 600;">Use of Software</span><br>
+
+
+If the Services require or include downloadable software such as an app, or use of software provided by the Company for Publishers, the Company grants a personal, limited, non-exclusive and non-transferable license to use the Software, all portions thereof, all documentation, and all updates (individually and collectively the “Software”) only for the purposes relating to live or offline video streaming and related activities through the Uvah Care App or website. Users shall not modify, alter, create derivative works, decompile, reverse engineer, disassemble, include in other software, translate the Software, or use the Software for any other purpose. Users shall not copy, reproduce, transmit, rent, lease, resell, sublicense, assign, distribute or otherwise transfer the Software or this license. This license does not allow Users to use the Software on any device that the User does not own or control, and user may not distribute or make the Software available over a network where the Software could be used by multiple devices at the same time. The User agrees that the Software, including the specific design and structure, constitute proprietary and confidential information, trade secrets and/or intellectual property of the Company. The User agrees not to disclose, provide, or otherwise make available such proprietary and confidential information, trade secrets or copyrighted material in any form to any third party, or use the proprietary and confidential information, trade secrets or copyrighted material for the user’s own benefit or for the benefit of any third party. The User acknowledges and agrees that use of the Software may require the Company to acquire User’s mobile phone number and perhaps additional such information in order to obtain access Software. The User agrees that the Company may collect and use technical data and related information that is gathered periodically to facilitate the provision of updates, product support and other services. The Company may use this information, as long as it is in a form that does not personally identify a User. The Company shall have the right, and the User agrees, that in its sole discretion and with reasonable posted notice and/or sent to the User’s email address, to revise, automatically update, or otherwise modify the Software, at any time. The User’s continued use of the Software constitutes acceptance of and agreement to such changes. This License is effective until terminated by the User or the Company at its sole discretion. User’s rights under this license will terminate automatically without notice if User fails to comply with any terms of this License. Upon termination, the User shall cease all use of the Software and delete all versions of the Software possessed by the user. The warranty and limitation of liability provisions set forth below apply also to the use of the Software.
+
+<br><br>
+<span style="font-weight: 600;">Warranty Disclaimers</span><br>
+
+
+THE SERVICES ARE PROVIDED "AS IS" AND “AS AVAILABLE”, WITH ALL FAULTS AND WITHOUT WARRANTY OF ANY KIND, AND COMPANY HEREBY DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE SERVICES, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES AND/OR CONDITIONS OF MERCHANTABILITY, OF SATISFACTORY QUALITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF ACCURACY, OF QUIET ENJOYMENT, AND NON-INFRINGEMENT OF THIRD PARTY RIGHTS. THE COMPANY DOES NOT WARRANT THAT THE SERVICES WILL MEET USER REQUIREMENTS OR BE OF BENEFIT, THAT THE OPERATION OF SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT THE SERVICES ARE FREE OF COMPUTER VIRUSES OR OTHER HARMFUL MECHANISMS. SHOULD THE LICENSED APPLICATION OR SERVICES PROVE DEFECTIVE, THE COMPANY IS NOT RESPONSIBLE FOR THOSE COSTS ASSOCIATED WITH THE NEED FOR SERVICING OR REPLACING EQUIPMENT OR DATA. THE COMPANY MAKES NO WARRANTIES ABOUT THE ACCURACY, RELIABILITY, COMPLETENESS OR TIMELINESS OF THE SERVICES OR USER GENERATED CONTENT OFFERED OR ANY OTHER CONTENT ACCESSED THROUGH THE SERVICES. THE TRANSMISSION OF DATA OR INFORMATION INCLUDING COMMUNICATIONS BY E-MAIL OVER THE INTERNET OR OTHER PUBLICLY ACCESSIBLE NETWORKS IS NOT SECURE, AND IS SUBJECT TO POSSIBLE LOSS, INTERCEPTION OR ALTERATION WHILE IN TRANSIT. ACCORDINGLY, THE COMPANY DOES NOT ASSUME ANY LIABILITY FOR ANY DAMAGE USERS MAY EXPERIENCE OR COSTS USERS MAY INCUR AS A RESULT OF ANY TRANSMISSIONS OVER THE INTERNET OR OTHER PUBLICLY ACCESSIBLE NETWORKS, SUCH AS TRANSMISSIONS INVOLVING THE EXCHANGE OF E-MAIL. IN NO EVENT WILL SUCH DATA OR INFORMATION BE DEEMED TO BE CONFIDENTIAL, CREATE ANY FIDUCIARY OBLIGATIONS ON THE COMPANY’S PART, OR RESULT IN ANY LIABILITY TO THE USER IN THE EVENT THAT SUCH INFORMATION IS INADVERTENTLY RELEASED OR ACCESSED BY THIRD PARTIES WITHOUT CONSENT. THE COMPANY TAKES NO RESPONSIBILITY WHATSOEVER FOR THE INFORMATION THE USER HAS UPLOADED TO THE SERVICES AND SHALL NOT BE RESPONSIBLE OR LIABLE FOR THE DELETION, CORRECTION, DESTRUCTION, DAMAGE, OR LOSS OF SUCH INFORMATION, OR FAILURE TO STORE ANY OF SUCH INFORMATION. NOR IS THE COMPANY RESPONSIBLE FOR LOSS OF INFORMATION THROUGH THE ACTION OF ANY THIRD PARTY OR BECAUSE OF CIRCUMSTANCES BEYOND THE COMPANY’S CONTROL. ALL USERS ARE EXPECTED TO HAVE THEIR OWN BACKUP OF ALL OF THEIR INFORMATION. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, USER UNDERSTANDS AND AGREES THAT NEITHER THE COMPANY NOR ANY OF ITS AFFILIATES OR SUBSIDIARIES, OR ANY OF THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, PARTNERS, REPRESENTATIVES, CONTRACTORS OR AGENTS SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY OR ANY OTHER DAMAGES RELATING TO OR RESULTING FROM USE OF THE SERVICES OR FROM ANY ACTIONS THE COMPANY TAKES OR FAILS TO TAKE. THESE INCLUDE BUT ARE NOT LIMITED TO DAMAGES FOR ERRORS, OMISSIONS, INTERRUPTIONS, DEFECTS, DELAYS, COMPUTER VIRUSES, LOST PROFITS, LOSS OF DATA, BUSINESS INTERRUPTION, UNAUTHORIZED ACCESS TO AND ALTERATION OF TRANSMISSIONS AND DATA, BODILY INJURY, EMOTIONAL DISTRESS AND OTHER TANGIBLE AND INTANGIBLE LOSSES. THIS LIMITATION APPLIES REGARDLESS OF WHETHER THE DAMAGES ARE CLAIMED UNDER THE TERMS OF A CONTRACT, AS THE RESULT OF NEGLIGENCE OR OTHERWISE, AND EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. COMPANY'S MAXIMUM LIABILITY ARISING OUT OF OR IN CONNECTION WITH THIS SERVICES OR USE OF THE SERVICES, REGARDLESS OF THE CAUSE OF ACTION (WHETHER IN CONTRACT, TORT, BREACH OF WARRANTY OR OTHERWISE), WILL NOT EXCEED THE AMOUNT, IF ANY, PAID FOR THE SERVICES. THE COMPANY IS NOT RESPONSIBLE FOR DELETION OR LOSS OF FILES OR INFORMATION UPLOADED TO THE SERVICES. ALL USERS ARE EXPECTED TO HAVE THEIR OWN BACKUP OF ALL FILES AND INFORMATION UPLOADED TO THE SERVICES.
+
+<br><br>
+<span style="font-weight: 600;">Limitation of Liabilities</span><br>
+
+
+IN ADDITION TO ANY LIMITATION OF LIABILITY SET FORTH HEREIN, TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, USER UNDERSTANDS AND AGREES THAT NEITHER THE COMPANY NOR ANY OF ITS AFFILIATES OR SUBSIDIARIES, OR ANY OF THEIR RESPECTIVE DIRECTORS, OFFICERS, EMPLOYEES, PARTNERS, REPRESENTATIVES, CONTRACTORS OR AGENTS SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY OR ANY OTHER DAMAGES RELATING TO OR RESULTING FROM THE USER’S USE OR INABILITY TO USE THE SERVICES OR FROM ANY ACTIONS THE COMPANY TAKES OR FAILS TO TAKE. THESE INCLUDE DAMAGES FOR ERRORS, OMISSIONS, INTERRUPTIONS, DEFECTS, DELAYS, COMPUTER VIRUSES, LOSS OF PROFITS, LOSS OF DATA, UNAUTHORIZED ACCESS TO AND ALTERATION OF TRANSMISSIONS AND DATA, EMOTIONAL DISTRESS AND OTHER TANGIBLE AND INTANGIBLE LOSSES. THE USER UNDERSTANDS AND ACKNOWLEDGES THAT COMPANY WILL NOT BE LIABLE FOR ANY NETWORK-RELATED PROBLEMS ATTRIBUTABLE TO THE OPERATION OF THE SERVICE AND THAT NETWORK CONFIGURATION CHANGES MAY AFFECT THE SYSTEM'S PERFORMANCE. THE USER HEREBY ACKNOWLEDGES AND AGREES THAT COMPANY SHALL HAVE NO LIABILITY WHATSOEVER IN CONNECTION WITH OR ARISING FROM THE USER’S USE OF THE SERVICE, AS SET FORTH HEREIN. THE USER’S ONLY RIGHT OR REMEDY REGARDING ANY PROBLEMS OR DISSATISFACTION WITH THE SERVICE IS TO UNINSTALL IT AND/OR DISCONTINUE THE USER’S USE OF THE SERVICE. COMPANY SHALL IN NO CASE BE LIABLE FOR ANY PERSONAL INJURY HARM, OR DEATH RELATED TO USE OF THE SERVICE, OR FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE THE SERVICE, EVEN IF COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THIS LIMITATION APPLIES REGARDLESS OF WHETHER THE DAMAGES ARE CLAIMED UNDER WARRANTY, CONTRACT, NEGLIGENCE, TORT, OR ANY OTHER LEGAL THEORY, AND EVEN IF THE COMPANY OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. COMPANY'S MAXIMUM LIABILITY ARISING OUT OF OR IN CONNECTION WITH THE USER’S USE OF THE SERVICES, REGARDLESS OF THE CAUSE OF ACTION, WILL NOT EXCEED THE AMOUNT, IF ANY, PAID FOR THE SERVICES.
+
+<br><br>
+<span style="font-weight: 600;">Indemnification</span><br>
+
+
+THE USER AGREES TO DEFEND, INDEMNIFY, AND HOLD HARMLESS THE COMPANY AND ITS SUBSIDIARIES, AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, REPRESENTATIVES, AND PARTNERS, HARMLESS FROM AND AGAINST ANY LOSS, LIABILITY, CLAIM, ACTION, OR DEMAND, INCLUDING WITHOUT LIMITATION REASONABLE LEGAL AND ACCOUNTING FEES, ALLEGING OR RESULTING FROM (I) THE USER’S USE OF THE SERVICES; (II) ANY USER GENERATED CONTENT OR COMMUNICATIONS, OR (III) THE USER BREACHES OF THE TERMS OF THIS AGREEMENT. THE COMPANY SHALL PROVIDE NOTICE TO THE USER PROMPTLY OF ANY SUCH CLAIM, SUIT, OR PROCEEDING AND SHALL ASSIST THE USER, AT THE USER’S EXPENSE, IN DEFENDING ANY SUCH CLAIM, SUIT OR PROCEEDING. THE COMPANY RESERVES THE RIGHT TO ASSUME THE EXCLUSIVE DEFENSE AND CONTROL OF ANY MATTER SUBJECT TO IMMEDIATE INDEMNIFICATION.
+
+<br><br>
+<span style="font-weight: 600;">Communications</span><br>
+
+
+By using the Services the User consents to receive electronic communications from the Company. These communications will include, emails about account, password, access, marketing, transactional and other information related to the Services and to the User’s account.
+<br><br>
+<span style="font-weight: 600;">Additional Terms and Conditions</span><br>
+
+
+Nothing in this Agreement is intended to create or will be construed as creating a joint ventures, partnership, employer/employee or principal and agent relationship between Users and the Company. These Terms of Service shall be governed by and construed in accordance with the laws of Republic of India, without regard to conflict of laws. The User irrevocably consents to the exclusive jurisdiction of the courts located in Pune, India in connection with any action arising out of or related to these Term of Service and waives any objection based on lack of personal jurisdiction, place of residence, improper venue forum non-convenience in any such action. If any court having competent jurisdiction holds any provision of this Terms of Service invalid or unenforceable in any respect, such provision shall be enforced to the maximum extent permitted by law, and the remaining provisions of this Terms of Service shall continue in full force and effect. The failure or delay of either party to exercise or enforce any right or claim does not constitute a waiver of such right or claim and shall in no way affect that party’s right to later enforce or exercise it, unless such party issues an express written waiver, signed by a duly authorized representative. The user may not assign these Terms of Service or any of the user’s rights or obligations hereunder. Except as expressly specified herein, this Agreement shall create rights and obligations only between the Company and each individual user and it does not create any rights for any other parties.
+    </p>
+  </div>
+
+  
+  
+
+  <!-- <div class="aboutsectionbody">
+    <h2>Our App</h2>
+    <p>More than 2 billion people in over 180 countries use WhatsApp1 to stay in touch with friends and family, anytime and anywhere. WhatsApp is free2 and offers simple, secure, reliable messaging and calling, available on phones all over the world.
+      <br>
+      1 And yes, the name WhatsApp is a pun on the phrase What's Up.
+      <br>
+      2 Data charges may apply.</p>
+  </div> -->
+</div>
+
+
+
+
+<footer class="shadow bg-[#131B20]">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0 flex flex-col gap-8">
+            <a href="index.html" class="flex items-center">
+                <img src="./public/logo.svg" class="h-8 me-3" alt="UvahCare Logo" />
+            </a>
+            <a class="buttonhero text-white" href="https://play.google.com/store/apps/details?id=com.innovation.socialmedia&pcampaignid=web_share" target="_blank">
+              <span>Download</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                <path d="M6.75 20H20.25M13.5 5.33334V16.3333M13.5 16.3333L17.4375 13.125M13.5 16.3333L9.5625 13.125"
+                  stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="index.html" class="hover:underline">Home</a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="about.html" class="hover:underline">About</a>
+                    </li>
+                    <li>
+                      <a href="why-us.html" class="hover:underline">Why us</a>
+                  </li>
+                </ul>
+            </div>
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="help.html" class="hover:underline ">Help</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                
+                <ul class="text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li class="mb-4">
+                        <a href="privacy-policy.html" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="terms-of-service.html" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="index.html" class="hover:underline">Uvahcare</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="https://www.facebook.com/pages/category/Medical---Health/UvahCare-113228164180677/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="https://www.instagram.com/uvah_care/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <g clip-path="url(#clip0_92_2)">
+                  <path
+                    d="M12.272 2.768C12.0821 2.768 11.8965 2.8243 11.7387 2.92979C11.5808 3.03528 11.4577 3.18521 11.3851 3.36062C11.3124 3.53604 11.2934 3.72906 11.3304 3.91529C11.3675 4.10151 11.4589 4.27256 11.5932 4.40682C11.7274 4.54108 11.8985 4.63251 12.0847 4.66955C12.2709 4.7066 12.464 4.68758 12.6394 4.61492C12.8148 4.54226 12.9647 4.41922 13.0702 4.26135C13.1757 4.10348 13.232 3.91787 13.232 3.728C13.232 3.47339 13.1309 3.22921 12.9508 3.04918C12.7708 2.86914 12.5266 2.768 12.272 2.768ZM15.952 4.704C15.9364 4.04024 15.8121 3.38352 15.584 2.76C15.3806 2.22651 15.064 1.74342 14.656 1.344C14.2599 0.933941 13.7756 0.619341 13.24 0.424C12.6181 0.188929 11.9607 0.061768 11.296 0.048C10.448 -4.47035e-08 10.176 0 8 0C5.824 0 5.552 -4.47035e-08 4.704 0.048C4.03932 0.061768 3.38187 0.188929 2.76 0.424C2.22534 0.621319 1.74155 0.935648 1.344 1.344C0.933941 1.74014 0.619341 2.22435 0.424 2.76C0.188929 3.38187 0.061768 4.03932 0.048 4.704C-4.47035e-08 5.552 0 5.824 0 8C0 10.176 -4.47035e-08 10.448 0.048 11.296C0.061768 11.9607 0.188929 12.6181 0.424 13.24C0.619341 13.7756 0.933941 14.2599 1.344 14.656C1.74155 15.0644 2.22534 15.3787 2.76 15.576C3.38187 15.8111 4.03932 15.9382 4.704 15.952C5.552 16 5.824 16 8 16C10.176 16 10.448 16 11.296 15.952C11.9607 15.9382 12.6181 15.8111 13.24 15.576C13.7756 15.3807 14.2599 15.0661 14.656 14.656C15.0658 14.2581 15.3827 13.7746 15.584 13.24C15.8121 12.6165 15.9364 11.9598 15.952 11.296C15.952 10.448 16 10.176 16 8C16 5.824 16 5.552 15.952 4.704ZM14.512 11.2C14.5062 11.7078 14.4142 12.211 14.24 12.688C14.1123 13.0362 13.9071 13.3507 13.64 13.608C13.3805 13.8724 13.0666 14.0771 12.72 14.208C12.243 14.3822 11.7398 14.4742 11.232 14.48C10.432 14.52 10.136 14.528 8.032 14.528C5.928 14.528 5.632 14.528 4.832 14.48C4.30471 14.4899 3.77968 14.4087 3.28 14.24C2.94863 14.1025 2.64908 13.8982 2.4 13.64C2.13447 13.383 1.93187 13.0682 1.808 12.72C1.61269 12.2361 1.50435 11.7216 1.488 11.2C1.488 10.4 1.44 10.104 1.44 8C1.44 5.896 1.44 5.6 1.488 4.8C1.49159 4.28084 1.58636 3.76636 1.768 3.28C1.90884 2.94233 2.12501 2.64133 2.4 2.4C2.64305 2.12493 2.94343 1.90648 3.28 1.76C3.76764 1.58403 4.2816 1.49206 4.8 1.488C5.6 1.488 5.896 1.44 8 1.44C10.104 1.44 10.4 1.44 11.2 1.488C11.7078 1.49382 12.211 1.5858 12.688 1.76C13.0515 1.89492 13.3778 2.11428 13.64 2.4C13.9022 2.64574 14.107 2.94619 14.24 3.28C14.4178 3.76715 14.5098 4.28142 14.512 4.8C14.552 5.6 14.56 5.896 14.56 8C14.56 10.104 14.552 10.4 14.512 11.2ZM8 3.896C7.18865 3.89758 6.39597 4.13962 5.72212 4.59153C5.04828 5.04345 4.5235 5.68496 4.21411 6.435C3.90471 7.18505 3.82458 8.00997 3.98384 8.80554C4.14309 9.60111 4.53459 10.3316 5.10886 10.9048C5.68313 11.4779 6.41441 11.868 7.21029 12.0257C8.00617 12.1834 8.83093 12.1017 9.58038 11.7908C10.3298 11.48 10.9703 10.954 11.4209 10.2792C11.8715 9.6045 12.112 8.81135 12.112 8C12.1131 7.46008 12.0074 6.92529 11.801 6.42636C11.5946 5.92744 11.2916 5.47425 10.9095 5.09284C10.5273 4.71143 10.0736 4.40934 9.57424 4.20394C9.07492 3.99854 8.53991 3.89389 8 3.896ZM8 10.664C7.47311 10.664 6.95805 10.5078 6.51996 10.215C6.08187 9.92231 5.74042 9.50625 5.53878 9.01947C5.33715 8.53269 5.2844 7.99705 5.38719 7.48028C5.48998 6.96351 5.7437 6.48883 6.11627 6.11627C6.48883 5.7437 6.96351 5.48998 7.48028 5.38719C7.99705 5.2844 8.53269 5.33715 9.01947 5.53878C9.50625 5.74042 9.92231 6.08187 10.215 6.51996C10.5078 6.95805 10.664 7.47311 10.664 8C10.664 8.34984 10.5951 8.69626 10.4612 9.01947C10.3273 9.34268 10.1311 9.63636 9.88373 9.88373C9.63636 10.1311 9.34268 10.3273 9.01947 10.4612C8.69626 10.5951 8.34984 10.664 8 10.664Z"
+                    fill="currentColor" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_92_2">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+                <span class="sr-only">Instagram page</span>
+            </a>
+            <a href="https://twitter.com/CareUvah?t=jb3rWQa-ldpURupJmfnQgw&s=08" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <g clip-path="url(#clip0_92_10)">
+                  <path
+                    d="M9.74857 6.50133L14.9943 0H12.653L8.64914 4.96533L5.09714 0H0L5.94743 8.31238L0.358095 15.2381H2.70019L7.04686 9.85143L10.9029 15.2381H16L9.74857 6.50133ZM7.93524 8.74895L6.83429 7.21067L2.56 1.23962H4.32L7.7699 6.05257L8.86933 7.59162L13.4545 13.9985H11.6945L7.93524 8.74895Z"
+                    fill="currentColor" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_92_10">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="https://youtube.com/channel/UCAAxT_qT81CNMlY5kEhZZeA" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M6.4 10L10.552 7.6L6.4 5.2V10ZM15.648 3.736C15.752 4.112 15.824 4.616 15.872 5.256C15.928 5.896 15.952 6.448 15.952 6.928L16 7.6C16 9.352 15.872 10.64 15.648 11.464C15.448 12.184 14.984 12.648 14.264 12.848C13.888 12.952 13.2 13.024 12.144 13.072C11.104 13.128 10.152 13.152 9.272 13.152L8 13.2C4.648 13.2 2.56 13.072 1.736 12.848C1.016 12.648 0.552 12.184 0.352 11.464C0.248 11.088 0.176 10.584 0.128 9.944C0.0720001 9.304 0.048 8.752 0.048 8.272L0 7.6C0 5.848 0.128 4.56 0.352 3.736C0.552 3.016 1.016 2.552 1.736 2.352C2.112 2.248 2.8 2.176 3.856 2.128C4.896 2.072 5.848 2.048 6.728 2.048L8 2C11.352 2 13.44 2.128 14.264 2.352C14.984 2.552 15.448 3.016 15.648 3.736Z"
+                  fill="currentColor" />
+              </svg>
+                <span class="sr-only">YouTube account</span>
+            </a>
+            
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
